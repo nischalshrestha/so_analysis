@@ -13,9 +13,9 @@ This repo contains the csv files pulled from query results in <a data.stackexcha
 * Questions with votes >= 300
 * Questions with favorites
 * Questions with links (SO, Android documentation, other)
+* Questions which contain images (including gifs) for clarification
 
 ### In progress:
 
 * Questions with code markup text for highlighting things like Classes or code samples
-* Questions which contain images (including gifs) for clarification
 * Coverage of the added/changed/removed Classes and methods with the Android 5.0

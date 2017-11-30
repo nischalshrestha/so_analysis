@@ -92,6 +92,13 @@ def tags(tag):
 			ids.append(row['Id'])
 	return ids
 
+# questions with images
+img_ids = tags('img')
+df_i = df_q[df_q['Id'].isin(img_ids)]
+df_i_t = df_i.shape[0]
+df_i_p = int(((df_i_t / float(df_qt))*100))
+print("Number of questions with images: %d (%d%%)" % (df_i_t, df_i_p))	
+
 # HREF LINKS GENERAL
 
 # questions with links
@@ -145,8 +152,10 @@ print("Number of questions with codes: %d (%d%%)" % (df_codes_t, df_codes_p))
 
 # questions with single word code markup
 
-# questions with code sample
 
+
+
+# questions with code sample
 # randomly sample 300 questions that have answers
 # df_r = df_q.sample(300)
 # with open('random_sample.html', 'w') as f:
