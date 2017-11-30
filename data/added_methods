@@ -1,0 +1,900 @@
+acceptThirdPartyCookies (WebView)
+addAction (AccessibilityAction)
+addAllowedApplication (String)
+addAppTask (Activity, Intent, TaskDescription, Bitmap)
+addArc (float, float, float, float, float, float)
+addCrossProfileIntentFilter (ComponentName, IntentFilter, int)
+addCrossProfileWidgetProvider (ComponentName, String)
+addDefaultNetworkActiveListener (OnNetworkActiveListener)
+addDisallowedApplication (String)
+addEarcon
+  type  (String, File) in android.speech.tts.TextToSpeech 
+  type  (String, String) in android.speech.tts.TextToSpeech 
+addOval (float, float, float, float, Direction)
+addPersistentPreferredActivity (ComponentName, IntentFilter, ComponentName)
+addPerson (String)
+addRoundRect
+  type  (float, float, float, float, float, float, Direction) in android.graphics.Path 
+  type  (float, float, float, float, float[], Direction) in android.graphics.Path 
+addSharedElement (View, String)
+addSpeech
+  type  (CharSequence, File) in android.speech.tts.TextToSpeech 
+  type  (CharSequence, String, int) in android.speech.tts.TextToSpeech 
+addTarget
+  type  (Class) in android.transition.Transition 
+  type  (String) in android.transition.Transition 
+addUserRestriction (ComponentName, String)
+allowBypass ()
+allowFamily (int)
+append (CharSequence, Object, int)
+applyTheme (Theme)
+arcTo (float, float, float, float, float, float, boolean)
+
+
+bindAppWidgetIdIfAllowed (int, UserHandle, ComponentName, Bundle)
+buildChildDocumentsUriUsingTree (Uri, String)
+buildDocumentUriUsingTree (Uri, String)
+buildTreeDocumentUri (String, String)
+
+
+callActivityOnCreate (Activity, Bundle, PersistableBundle)
+callActivityOnPostCreate (Activity, Bundle, PersistableBundle)
+callActivityOnRestoreInstanceState (Activity, Bundle, PersistableBundle)
+callActivityOnSaveInstanceState (Activity, Bundle, PersistableBundle)
+canApplyTheme
+  type  () in android.graphics.drawable.Drawable 
+  type  () in android.graphics.drawable.Drawable.ConstantState 
+cancelNotification
+  type  (String) in android.service.notification.NotificationListenerService 
+  type  (String, String, int) in android.service.notification.NotificationListenerService 
+cancelNotifications (String[])
+cancelSync (SyncRequest)
+cancelWps (WpsCallback)
+canRemoveViews ()
+canVirtualize (int, int)
+categoryAllowsForegroundPreference (String)
+clearClientCertPreferences (Runnable)
+clearCrossProfileIntentFilters (ComponentName)
+clearDeviceOwnerApp (String)
+clearPackagePersistentPreferredActivities (ComponentName, String)
+clearUserRestriction (ComponentName, String)
+clearWindowAnimationFrameStats ()
+clearWindowContentFrameStats (int)
+computeSystemWindowInsets (WindowInsets, Rect)
+consumeStableInsets ()
+copy1DRangeFrom (int, int, Object)
+copy1DRangeFromUnchecked (int, int, Object)
+copy2DRangeFrom (int, int, int, int, Object)
+copyFrom (Object)
+copyFromUnchecked (Object)
+copyTo (Object)
+create
+  type  () in android.app.Dialog 
+  type  (Context, Uri, SurfaceHolder, AudioAttributes, int) in android.media.MediaPlayer 
+  type  (Context, int, AudioAttributes, int) in android.media.MediaPlayer 
+  type  (Context, ContextType, int) in android.renderscript.RenderScript 
+createAndInitializeUser (ComponentName, String, String, ComponentName, Bundle)
+createConfirmDeviceCredentialIntent (CharSequence, CharSequence)
+createDocument (ContentResolver, Uri, String, String)
+createFromProfileLevel (String, int, int)
+createFromXml (Resources, XmlPullParser, Theme)
+createFromXmlInner (Resources, XmlPullParser, AttributeSet, Theme)
+createPrintDocumentAdapter
+  type  (String) in android.webkit.WebView 
+  type  () in android.webkit.WebView 
+createTextRecord (String, String)
+createUser (ComponentName, String)
+createVirtualDisplay (String, int, int, int, Surface, int, Callback, Handler)
+createX (RenderScript, Element, int)
+createXY (RenderScript, Element, int, int)
+createXYZ (RenderScript, Element, int, int, int)
+
+
+dispatchNestedFling (float, float, boolean)
+dispatchNestedPreFling (float, float)
+dispatchNestedPreScroll (int, int, int[], int[])
+dispatchNestedScroll (int, int, int, int, int[])
+downloadMultimediaMessage (Context, String, Uri, Bundle, PendingIntent)
+drawableHotspotChanged (float, float)
+drawArc (float, float, float, float, float, float, boolean, Paint)
+drawOval (float, float, float, float, Paint)
+drawRoundRect (float, float, float, float, float, float, Paint)
+
+
+enableSlowWholeDocumentDraw ()
+enableSystemApp
+  type  (ComponentName, Intent) in android.app.admin.DevicePolicyManager 
+  type  (ComponentName, String) in android.app.admin.DevicePolicyManager 
+error (int)
+excludeTarget (String, boolean)
+executeShellCommand (String)
+
+
+findDecoderForFormat (MediaFormat)
+findEncoderForFormat (MediaFormat)
+findFocus
+  type  (int) in android.accessibilityservice.AccessibilityService 
+  type  (int) in android.app.UiAutomation 
+finishAfterTransition ()
+finishAndRemoveTask ()
+fling (int)
+flush ()
+forceVirtualizationMode (int)
+forEach
+  type  (Allocation, Allocation, LaunchOptions) in android.renderscript.ScriptIntrinsic3DLUT 
+  type  (Allocation, LaunchOptions) in android.renderscript.ScriptIntrinsicBlur 
+  type  (Allocation, Allocation, LaunchOptions) in android.renderscript.ScriptIntrinsicColorMatrix 
+  type  (Allocation, LaunchOptions) in android.renderscript.ScriptIntrinsicConvolve3x3 
+  type  (Allocation, LaunchOptions) in android.renderscript.ScriptIntrinsicConvolve5x5 
+  type  (Allocation, LaunchOptions) in android.renderscript.ScriptIntrinsicHistogram 
+  type  (Allocation, Allocation, LaunchOptions) in android.renderscript.ScriptIntrinsicLUT 
+forEach_Dot (Allocation, LaunchOptions)
+forEachAdd (Allocation, Allocation, LaunchOptions)
+forEachClear (Allocation, Allocation, LaunchOptions)
+forEachDst (Allocation, Allocation, LaunchOptions)
+forEachDstAtop (Allocation, Allocation, LaunchOptions)
+forEachDstIn (Allocation, Allocation, LaunchOptions)
+forEachDstOut (Allocation, Allocation, LaunchOptions)
+forEachDstOver (Allocation, Allocation, LaunchOptions)
+forEachMultiply (Allocation, Allocation, LaunchOptions)
+forEachSrc (Allocation, Allocation, LaunchOptions)
+forEachSrcAtop (Allocation, Allocation, LaunchOptions)
+forEachSrcIn (Allocation, Allocation, LaunchOptions)
+forEachSrcOut (Allocation, Allocation, LaunchOptions)
+forEachSrcOver (Allocation, Allocation, LaunchOptions)
+forEachSubtract (Allocation, Allocation, LaunchOptions)
+forEachXor (Allocation, Allocation, LaunchOptions)
+forLanguageTag (String)
+formatNumber
+  type  (String, String) in android.telephony.PhoneNumberUtils 
+  type  (String, String, String) in android.telephony.PhoneNumberUtils 
+  type  (String) in android.telephony.PhoneNumberUtils 
+  type  (Editable, int) in android.telephony.PhoneNumberUtils 
+formatNumberToE164 (String, String)
+
+
+generateAudioSessionId ()
+getAccountTypesWithManagementDisabled ()
+getActionList ()
+getActiveNotifications (String[])
+getAidsForService (ComponentName, String)
+getAllNetworks ()
+getAllowEnterTransitionOverlap
+  type  () in android.app.Fragment 
+  type  () in android.view.Window 
+getAllowReturnTransitionOverlap
+  type  () in android.app.Fragment 
+  type  () in android.view.Window 
+getAlternateSetting ()
+getApplicationRestrictions (ComponentName, String)
+getAppTasks ()
+getAppTaskThumbnailSize ()
+getAppVsyncOffsetNanos ()
+getAttributes ()
+getAudioAttributes ()
+getAudioCapabilities ()
+getAutoTimeRequired ()
+getAvailableLanguages ()
+getBackgroundTintList ()
+getBackgroundTintMode ()
+getBluetoothLeAdvertiser ()
+getBluetoothLeScanner ()
+getButtonTintList ()
+getButtonTintMode ()
+getCarrierConfigValues ()
+getChangingConfigurations ()
+getChannelMask ()
+getCharSequence ()
+getCharSequenceText ()
+getCheckMarkTintList ()
+getCheckMarkTintMode ()
+getClipToOutline ()
+getClipToPadding ()
+getCodeCacheDir
+  type  () in android.content.Context 
+  type  () in android.content.ContextWrapper 
+  type  () in android.test.mock.MockContext 
+getCodecInfos ()
+getColor ()
+getColorFilter ()
+getConfiguration (int)
+getConfigurationCount ()
+getContentScene
+  type  () in android.app.Activity 
+  type  () in android.view.Window 
+getContentTransitionManager ()
+getCropRect ()
+getCrossProfileCallerIdDisabled (ComponentName)
+getCrossProfileWidgetProviders (ComponentName)
+getCurrentInterruptionFilter ()
+getCurrentListenerHints ()
+getCurrentRanking ()
+getDefaultFormat ()
+getDefaultSensor (int, boolean)
+getDefaultVoice ()
+getDirtyBounds ()
+getDisplayScript
+  type  () in java.util.Locale 
+  type  (Locale) in java.util.Locale 
+getDrawable
+  type  (int) in android.content.Context 
+  type  (int, Theme) in android.content.res.Resources 
+  type  (int) in android.content.res.Resources.Theme 
+getDrawableForDensity (int, int, Theme)
+getElevation
+  type  () in android.app.ActionBar 
+  type  () in android.view.View 
+  type  () in android.widget.PopupWindow 
+getEncoderCapabilities ()
+getEncoding ()
+getEnterTransition
+  type  () in android.app.Fragment 
+  type  () in android.view.Window 
+getEpicenter ()
+getEpicenterCallback ()
+getError ()
+getExitTransition
+  type  () in android.app.Fragment 
+  type  () in android.view.Window 
+getExtension (char)
+getExtensionKeys ()
+getExternalMediaDirs
+  type  () in android.content.Context 
+  type  () in android.content.ContextWrapper 
+  type  () in android.test.mock.MockContext 
+getExternalStorageState (File)
+getFeatureEnabled (String)
+getFirstDayOfWeek ()
+getFontFeatureSettings
+  type  () in android.graphics.Paint 
+  type  () in android.widget.TextView 
+getForegroundTintList ()
+getForegroundTintMode ()
+getFrequency ()
+getFromDegrees ()
+getGradientRadius ()
+getGroupKey ()
+getHideOffset ()
+getImageTintList ()
+getImageTintMode ()
+getIndeterminateTintList ()
+getIndeterminateTintMode ()
+getInputBuffer (int)
+getInputFormat ()
+getInputImage (int)
+getInputMethodWindowRecommendedHeight ()
+getInstalledCaCerts (ComponentName)
+getInstalledProvidersForProfile (UserHandle)
+getIntProperty (int)
+getIntValue ()
+getLeanbackLaunchIntentForPackage
+  type  (String) in android.content.pm.PackageManager 
+  type  (String) in android.test.mock.MockPackageManager 
+getLetterSpacing
+  type  () in android.graphics.Paint 
+  type  () in android.widget.TextView 
+getLinkProperties (Network)
+getLongProperty (int)
+getManufacturerName ()
+getMax ()
+getMaxDelay ()
+getMaxHeight ()
+getMaxTextLength ()
+getMediaController
+  type  () in android.app.Activity 
+  type  () in android.view.Window 
+getMediaSession ()
+getMimeType ()
+getMixedContentMode ()
+getMode ()
+getName ()
+getNativeHandle ()
+getNavigationBarColor ()
+getNestedScrollAxes ()
+getNetworkCapabilities (Network)
+getNetworkInfo (Network)
+getNextAlarmClock ()
+getNoBackupFilesDir
+  type  () in android.content.Context 
+  type  () in android.content.ContextWrapper 
+  type  () in android.test.mock.MockContext 
+getOutline
+  type  (Outline) in android.graphics.drawable.Drawable 
+  type  (Outline) in android.graphics.drawable.shapes.Shape 
+getOutlineProvider ()
+getOutputBuffer (int)
+getOutputFormat (int)
+getOutputImage (int)
+getPackageInstaller
+  type  () in android.content.pm.PackageManager 
+  type  () in android.test.mock.MockPackageManager 
+getPaddingMode ()
+getPathMotion ()
+getPermittedAccessibilityServices (ComponentName)
+getPermittedInputMethods (ComponentName)
+getPivotX ()
+getPivotY ()
+getPresentationDeadlineNanos ()
+getPreviousName (Account)
+getProcessDefaultNetwork ()
+getProductName ()
+getProfile ()
+getProgressBackgroundTintList ()
+getProgressBackgroundTintMode ()
+getProgressTintList ()
+getProgressTintMode ()
+getPropagation ()
+getReasonPhrase ()
+getReenterTransition
+  type  () in android.app.Fragment 
+  type  () in android.view.Window 
+getRemoveOnCancelPolicy ()
+getReportingMode ()
+getResources ()
+getResponseHeaders ()
+getReturnTransition
+  type  () in android.app.Fragment 
+  type  () in android.view.Window 
+getSampleRate ()
+getScreenCaptureDisabled (ComponentName)
+getScript ()
+getSecondaryProgressTintList ()
+getSecondaryProgressTintMode ()
+getSelectedTrack (int)
+getSelectionMode ()
+getSerialNumber ()
+getSharedElementEnterTransition
+  type  () in android.app.Fragment 
+  type  () in android.view.Window 
+getSharedElementExitTransition ()
+getSharedElementReenterTransition ()
+getSharedElementReturnTransition
+  type  () in android.app.Fragment 
+  type  () in android.view.Window 
+getSharedElementsUseOverlay ()
+getShowSoftInputOnFocus ()
+getShowText ()
+getSize (String)
+getSizeF (String)
+getSpeakerAngles (int, int, int[])
+getSplitTrack
+  type  () in android.widget.AbsSeekBar 
+  type  () in android.widget.Switch 
+getStableInsetBottom ()
+getStableInsetLeft ()
+getStableInsetRight ()
+getStableInsetTop ()
+getStateListAnimator ()
+getStatusBarColor ()
+getStatusCode ()
+getSupportedRefreshRates ()
+getSurface ()
+getTargetNames ()
+getTargetTypes ()
+getThumbTintList ()
+getThumbTintMode ()
+getToDegrees ()
+getTouchscreenBlocksFocus ()
+getTransitionAt (int)
+getTransitionBackgroundFadeDuration ()
+getTransitionCount ()
+getTransitionManager ()
+getTransitionName ()
+getTranslationZ ()
+getTreeDocumentId (Uri)
+getType (int)
+getTypeLabel (Resources, int, CharSequence)
+getUnicodeLocaleAttributes ()
+getUnicodeLocaleKeys ()
+getUnicodeLocaleType (String)
+getUser ()
+getUserBadgedDrawableForDensity
+  type  (Drawable, UserHandle, Rect, int) in android.content.pm.PackageManager 
+  type  (Drawable, UserHandle, Rect, int) in android.test.mock.MockPackageManager 
+getUserBadgedIcon
+  type  (Drawable, UserHandle) in android.content.pm.PackageManager 
+  type  (Drawable, UserHandle) in android.test.mock.MockPackageManager 
+getUserBadgedLabel
+  type  (CharSequence, UserHandle) in android.content.pm.PackageManager 
+  type  (CharSequence, UserHandle) in android.test.mock.MockPackageManager 
+getUserProfiles ()
+getVideoCapabilities ()
+getVirtualizationMode ()
+getVoice ()
+getVoiceName ()
+getVoices ()
+getWindow ()
+getWindowAnimationFrameStats ()
+getWindowContentFrameStats (int)
+getWindows
+  type  () in android.accessibilityservice.AccessibilityService 
+  type  () in android.app.UiAutomation 
+getZ ()
+
+
+hasBackgroundColor ()
+hasCaCertInstalled (ComponentName, byte[])
+hasEdgeColor ()
+hasEdgeType ()
+hasFinished ()
+hasForegroundColor ()
+hasNestedScrollingParent ()
+hasQueuedPredecessors
+  type  () in java.util.concurrent.locks.AbstractQueuedLongSynchronizer 
+  type  () in java.util.concurrent.locks.AbstractQueuedSynchronizer 
+hasStableInsets ()
+hasStarted ()
+hasUserRestriction (String)
+hasWindowColor ()
+
+
+iccCloseLogicalChannel (int)
+iccExchangeSimIO (int, int, int, int, int, String)
+iccOpenLogicalChannel (String)
+iccTransmitApduBasicChannel (int, int, int, int, int, String)
+iccTransmitApduLogicalChannel (int, int, int, int, int, int, String)
+indexOfKey (Object)
+inflate (Resources, XmlPullParser, AttributeSet, Theme)
+installCaCert (ComponentName, byte[])
+installKeyPair (ComponentName, PrivateKey, Certificate, String)
+invalidateOutline ()
+invokeBeam (Activity)
+is5GHzBandSupported ()
+isAccessibilityFocused ()
+isAffine ()
+isApplicationHidden (ComponentName, String)
+isButtonPressed (int)
+isChildDocument (String, String)
+isConsumed ()
+isConvex ()
+isDefaultNetworkActive ()
+isDeviceToApRttSupported ()
+isElegantTextHeight ()
+isEnhancedPowerReportingSupported ()
+isEnterpriseContactId (long)
+isExternalStorageEmulated (File)
+isExternalStorageRemovable (File)
+isFeatureRequired (String)
+isFormatSupported (MediaFormat)
+isHideOnContentScrollEnabled ()
+isImportantForAccessibility ()
+isInLockTaskMode ()
+isLocalEmergencyNumber (Context, String)
+isLockTaskPermitted (String)
+isMasterVolumeMuted (ComponentName)
+isMultipleAdvertisementSupported ()
+isNestedScrollingEnabled ()
+isOffloadedFilteringSupported ()
+isOffloadedScanBatchingSupported ()
+isOpaque ()
+isP2pSupported ()
+isPivotXRelative ()
+isPivotYRelative ()
+isPowerSaveMode ()
+isPreferredNetworkOffloadSupported ()
+isProfileOwnerApp (String)
+isSelected ()
+isSmsCapable ()
+isTdlsSupported ()
+isTransitionGroup ()
+isUninstallBlocked (ComponentName, String)
+isUserAddedCertificate (X509Certificate)
+isVoiceMailNumber (String)
+isVolumeFixed ()
+isWakeLockLevelSupported (int)
+isWakeUpSensor ()
+
+
+loadIcon (Context, int)
+loadLabel (PackageManager)
+loadPreviewImage (Context, int)
+loadStateListAnimator (Context, int)
+
+
+makeSceneTransitionAnimation
+  type  (Activity, Pair<View, String>) in android.app.ActivityOptions 
+  type  (Activity, View, String) in android.app.ActivityOptions 
+makeTaskLaunchBehind ()
+
+
+newDrawable (Resources, Theme)
+normalizeNumber (String)
+
+
+obtain
+  type  (int, int, boolean, int) in android.view.accessibility.AccessibilityNodeInfo.CollectionInfo 
+  type  (int, int, int, int, boolean, boolean) in android.view.accessibility.AccessibilityNodeInfo.CollectionItemInfo 
+ofArgb
+  type  (T, Property<T, Integer>, ) in android.animation.ObjectAnimator 
+  type  (Object, String, ) in android.animation.ObjectAnimator 
+  type  () in android.animation.ValueAnimator 
+ofFloat
+  type  (T, Property<T, Float>, Property<T, Float>, Path) in android.animation.ObjectAnimator 
+  type  (Object, String, String, Path) in android.animation.ObjectAnimator 
+ofInt
+  type  (T, Property<T, Integer>, Property<T, Integer>, Path) in android.animation.ObjectAnimator 
+  type  (Object, String, String, Path) in android.animation.ObjectAnimator 
+ofMultiFloat
+  type  (Object, String, TypeConverter<T, float[]>, TypeEvaluator<T>, ) in android.animation.ObjectAnimator 
+  type  (Object, String, Path) in android.animation.ObjectAnimator 
+  type  (Object, String, float[][]) in android.animation.ObjectAnimator 
+  type  (String, TypeConverter<T, float[]>, TypeEvaluator<T>, ) in android.animation.PropertyValuesHolder 
+  type  (String, TypeConverter<V, float[]>, TypeEvaluator<V>, ) in android.animation.PropertyValuesHolder 
+  type  (String, Path) in android.animation.PropertyValuesHolder 
+  type  (String, float[][]) in android.animation.PropertyValuesHolder 
+ofMultiInt
+  type  (Object, String, TypeConverter<T, int[]>, TypeEvaluator<T>, ) in android.animation.ObjectAnimator 
+  type  (Object, String, Path) in android.animation.ObjectAnimator 
+  type  (Object, String, int[][]) in android.animation.ObjectAnimator 
+  type  (String, TypeConverter<T, int[]>, TypeEvaluator<T>, ) in android.animation.PropertyValuesHolder 
+  type  (String, TypeConverter<V, int[]>, TypeEvaluator<V>, ) in android.animation.PropertyValuesHolder 
+  type  (String, Path) in android.animation.PropertyValuesHolder 
+  type  (String, int[][]) in android.animation.PropertyValuesHolder 
+ofObject
+  type  (T, Property<T, P>, TypeConverter<V, P>, TypeEvaluator<V>, ) in android.animation.ObjectAnimator 
+  type  (T, Property<T, V>, TypeConverter<PointF, V>, Path) in android.animation.ObjectAnimator 
+  type  (Object, String, TypeConverter<PointF, ?>, Path) in android.animation.ObjectAnimator 
+  type  (Property<?, V>, TypeConverter<T, V>, TypeEvaluator<T>, ) in android.animation.PropertyValuesHolder 
+  type  (Property<?, V>, TypeConverter<PointF, V>, Path) in android.animation.PropertyValuesHolder 
+  type  (String, TypeConverter<PointF, ?>, Path) in android.animation.PropertyValuesHolder 
+onActivityReenter (int, Intent)
+onAppear (ViewGroup, View, TransitionValues, TransitionValues)
+onApplyWindowInsets (WindowInsets)
+onCreate (Bundle, PersistableBundle)
+onDisappear (ViewGroup, View, TransitionValues, TransitionValues)
+onEnterAnimationComplete ()
+onError
+  type  (String, int) in android.speech.tts.UtteranceProgressListener 
+  type  (String) in android.speech.tts.UtteranceProgressListener 
+onGetDefaultVoiceNameFor (String, String, String)
+onGetVoices ()
+onInterruptionFilterChanged (int)
+onIsValidVoiceName (String)
+onListenerConnected ()
+onListenerHintsChanged (int)
+onLoadVoice (String)
+onLockTaskModeEntering (Context, Intent, String)
+onLockTaskModeExiting (Context, Intent)
+onMtuChanged (BluetoothGatt, int, int)
+onNestedFling
+  type  (View, float, float, boolean) in android.view.ViewGroup 
+  type  (View, float, float, boolean) in android.view.ViewParent 
+onNestedPreFling
+  type  (View, float, float) in android.view.ViewGroup 
+  type  (View, float, float) in android.view.ViewParent 
+onNestedPreScroll
+  type  (View, int, int, int[]) in android.view.ViewGroup 
+  type  (View, int, int, int[]) in android.view.ViewParent 
+onNestedScroll
+  type  (View, int, int, int, int) in android.view.ViewGroup 
+  type  (View, int, int, int, int) in android.view.ViewParent 
+onNestedScrollAccepted
+  type  (View, View, int) in android.view.ViewGroup 
+  type  (View, View, int) in android.view.ViewParent 
+onNotificationPosted (StatusBarNotification, RankingMap)
+onNotificationRankingUpdate (RankingMap)
+onNotificationRemoved (StatusBarNotification, RankingMap)
+onNotificationSent (BluetoothDevice, int)
+onPermissionRequest (PermissionRequest)
+onPermissionRequestCanceled (PermissionRequest)
+onPostCreate (Bundle, PersistableBundle)
+onProfileProvisioningComplete (Context, Intent)
+onPull (float, float)
+onReceivedClientCertRequest (WebView, ClientCertRequest)
+onRestored (Context, int[], int[])
+onRestoreFinished ()
+onRestoreInstanceState (Bundle, PersistableBundle)
+onSaveInstanceState (Bundle, PersistableBundle)
+onShowFileChooser (WebView, ValueCallback<Uri[]>, FileChooserParams)
+onStartNestedScroll
+  type  (View, View, int) in android.view.ViewGroup 
+  type  (View, View, int) in android.view.ViewParent 
+onStopNestedScroll
+  type  (View) in android.view.ViewGroup 
+  type  (View) in android.view.ViewParent 
+onUnhandledInputEvent (WebView, InputEvent)
+onUpdateCursorAnchorInfo (CursorAnchorInfo)
+onVisibleBehindCanceled ()
+onWakeUp ()
+openAssetFile
+  type  (Uri, String) in android.provider.DocumentsProvider 
+  type  (Uri, String, CancellationSignal) in android.provider.DocumentsProvider 
+
+
+playEarcon (String, int, Bundle, String)
+playSilentUtterance (long, int, String)
+postponeEnterTransition ()
+putSize (String, Size)
+putSizeF (String, SizeF)
+
+
+readPersistableBundle
+  type  () in android.os.Parcel 
+  type  (ClassLoader) in android.os.Parcel 
+readSize ()
+readSizeF ()
+registerAidsForService (ComponentName, String, List<String>)
+registerNetworkCallback (NetworkRequest, NetworkCallback)
+release (int)
+releaseInstance ()
+releaseOutputBuffer (int, long)
+removeAction
+  type  (AccessibilityAction) in android.view.accessibility.AccessibilityNodeInfo 
+  type  (int) in android.view.accessibility.AccessibilityNodeInfo 
+removeAidsForService (ComponentName, String)
+removeAllCookies (ValueCallback<Boolean>)
+removeAttribute (String)
+removeChild
+  type  (View) in android.view.accessibility.AccessibilityNodeInfo 
+  type  (View, int) in android.view.accessibility.AccessibilityNodeInfo 
+removeCrossProfileWidgetProvider (ComponentName, String)
+removeDefaultNetworkActiveListener (OnNetworkActiveListener)
+removeSessionCookies (ValueCallback<Boolean>)
+removeTarget
+  type  (Class) in android.transition.Transition 
+  type  (String) in android.transition.Transition 
+removeUser (ComponentName, UserHandle)
+renameAccount (Account, String, AccountManagerCallback<Account>, Handler)
+renameDocument
+  type  (ContentResolver, Uri, String) in android.provider.DocumentsContract 
+  type  (String, String) in android.provider.DocumentsProvider 
+replaceSystemWindowInsets (Rect)
+replaceUnicodeDigits (String)
+reportBadNetwork (Network)
+requestConnectionPriority (int)
+requestCursorUpdates
+  type  (int) in android.view.inputmethod.BaseInputConnection 
+  type  (int) in android.view.inputmethod.InputConnection 
+  type  (int) in android.view.inputmethod.InputConnectionWrapper 
+requestInterruptionFilter (int)
+requestListenerHints (int)
+requestMtu (int)
+requestNetwork (NetworkRequest, NetworkCallback)
+requestUnbufferedDispatch (MotionEvent)
+requestVisibleBehind (boolean)
+reset ()
+resize
+  type  (int, int, int) in android.hardware.display.VirtualDisplay 
+  type  (int) in android.util.LruCache 
+revokeDocumentPermission (String)
+
+
+saveLayer
+  type  (RectF, Paint) in android.graphics.Canvas 
+  type  (float, float, float, float, Paint) in android.graphics.Canvas 
+saveLayerAlpha
+  type  (RectF, int) in android.graphics.Canvas 
+  type  (float, float, float, float, int) in android.graphics.Canvas 
+sendEnvelopeWithStatus (String)
+sendMultimediaMessage (Context, Uri, String, Bundle, PendingIntent)
+setAcceptThirdPartyCookies (WebView, boolean)
+setAccountManagementDisabled (ComponentName, String, boolean)
+setActionBar (Toolbar)
+setAlarmClock (AlarmClockInfo, PendingIntent)
+setAllowEnterTransitionOverlap
+  type  (boolean) in android.app.Fragment 
+  type  (boolean) in android.view.Window 
+setAllowReturnTransitionOverlap
+  type  (boolean) in android.app.Fragment 
+  type  (boolean) in android.view.Window 
+setApplicationHidden (ComponentName, String, boolean)
+setApplicationRestrictions (ComponentName, String, Bundle)
+setAttribute (String, String)
+setAudioAttributes
+  type  (AudioAttributes) in android.media.MediaPlayer 
+  type  (AudioAttributes) in android.media.Ringtone 
+  type  (AudioAttributes) in android.speech.tts.TextToSpeech 
+setAutoTimeRequired (ComponentName, boolean)
+setBackgroundTintList (ColorStateList)
+setBackgroundTintMode (Mode)
+setBlocking (boolean)
+setButtonTintList (ColorStateList)
+setButtonTintMode (Mode)
+setCallback (Callback)
+setCategory (String)
+setCheckMarkTintList (ColorStateList)
+setCheckMarkTintMode (Mode)
+setClipToOutline (boolean)
+setColor
+  type  (int) in android.app.Notification.Builder 
+  type  (ColorStateList) in android.graphics.drawable.GradientDrawable 
+  type  (int) in android.widget.EdgeEffect 
+setConfiguration (UsbConfiguration)
+setContentTransitionManager (TransitionManager)
+setConverter (TypeConverter)
+setCookie (String, String, ValueCallback<Boolean>)
+setCropRect (Rect)
+setCrossProfileCallerIdDisabled (ComponentName, boolean)
+setDrawable (Drawable)
+setElegantTextHeight
+  type  (boolean) in android.graphics.Paint 
+  type  (boolean) in android.widget.TextView 
+setElevation
+  type  (float) in android.app.ActionBar 
+  type  (float) in android.view.View 
+  type  (float) in android.widget.PopupWindow 
+setEnterSharedElementCallback
+  type  (SharedElementCallback) in android.app.Activity 
+  type  (SharedElementCallback) in android.app.Fragment 
+setEnterTransition
+  type  (Transition) in android.app.Fragment 
+  type  (Transition) in android.view.Window 
+setEpicenterCallback (EpicenterCallback)
+setError (CharSequence)
+setExitSharedElementCallback
+  type  (SharedElementCallback) in android.app.Activity 
+  type  (SharedElementCallback) in android.app.Fragment 
+setExitTransition
+  type  (Transition) in android.app.Fragment 
+  type  (Transition) in android.view.Window 
+setFastScrollStyle (int)
+setFeatureEnabled (String, boolean)
+setFirstDayOfWeek (int)
+setFontFeatureSettings
+  type  (String) in android.graphics.Paint 
+  type  (String) in android.widget.TextView 
+setForegroundTintList (ColorStateList)
+setForegroundTintMode (Mode)
+setFromDegrees (float)
+setGlobalSetting (ComponentName, String, String)
+setHideOffset (int)
+setHideOnContentScrollEnabled (boolean)
+setHotspot (float, float)
+setHotspotBounds (int, int, int, int)
+setImageTintList (ColorStateList)
+setImageTintMode (Mode)
+setIndeterminateDrawableTiled (Drawable)
+setIndeterminateTintList (ColorStateList)
+setIndeterminateTintMode (Mode)
+setInterface (UsbInterface)
+setIntValue (int)
+setLetterSpacing
+  type  (float) in android.graphics.Paint 
+  type  (float) in android.widget.TextView 
+setLockTaskPackages (ComponentName, String[])
+setMasterVolumeMuted (ComponentName, boolean)
+setMatchOrder ()
+setMaxTextLength (int)
+setMediaController
+  type  (MediaController) in android.app.Activity 
+  type  (MediaController) in android.view.Window 
+setMixedContentMode (int)
+setMode (int)
+setNavigationBarColor (int)
+setNestedScrollingEnabled (boolean)
+setOnFrameAvailableListener (OnFrameAvailableListener, Handler)
+setOutlineProvider (ViewOutlineProvider)
+setOverlay (Drawable)
+setPaddingMode (int)
+setPathMotion (PathMotion)
+setPermittedAccessibilityServices (ComponentName, List<String>)
+setPermittedInputMethods (ComponentName, List<String>)
+setPivotX (float)
+setPivotXRelative (boolean)
+setPivotY (float)
+setPivotYRelative (boolean)
+setPreferredService (Activity, ComponentName)
+setProcessDefaultNetwork (Network)
+setProfileEnabled (ComponentName)
+setProfileName (ComponentName, String)
+setProgressBackgroundTintList (ColorStateList)
+setProgressBackgroundTintMode (Mode)
+setProgressDrawableTiled (Drawable)
+setProgressTintList (ColorStateList)
+setProgressTintMode (Mode)
+setPropagation (TransitionPropagation)
+setPublicVersion (Notification)
+setRecommendedGlobalProxy (ComponentName, ProxyInfo)
+setReenterTransition
+  type  (Transition) in android.app.Fragment 
+  type  (Transition) in android.view.Window 
+setRemoveOnCancelPolicy (boolean)
+setResponseHeaders (Map<String, String>)
+setRestrictionsProvider (ComponentName, ComponentName)
+setReturnTransition
+  type  (Transition) in android.app.Fragment 
+  type  (Transition) in android.view.Window 
+setScreenCaptureDisabled (ComponentName, boolean)
+setSecondaryProgressTintList (ColorStateList)
+setSecondaryProgressTintMode (Mode)
+setSecureSetting (ComponentName, String, String)
+setSelectionFromTop (int, int)
+setSharedElementEnterTransition
+  type  (Transition) in android.app.Fragment 
+  type  (Transition) in android.view.Window 
+setSharedElementExitTransition (Transition)
+setSharedElementReenterTransition (Transition)
+setSharedElementReturnTransition
+  type  (Transition) in android.app.Fragment 
+  type  (Transition) in android.view.Window 
+setSharedElementsUseOverlay (boolean)
+setShowSoftInputOnFocus (boolean)
+setShowText (boolean)
+setSound
+  type  (Uri, AudioAttributes) in android.app.Notification.Builder 
+  type  (Uri, int) in android.app.Notification.Builder 
+setSplitTrack
+  type  (boolean) in android.widget.AbsSeekBar 
+  type  (boolean) in android.widget.Switch 
+setStateListAnimator (StateListAnimator)
+setStatusBarColor (int)
+setStatusCodeAndReasonPhrase (int, String)
+setStroke
+  type  (int, ColorStateList) in android.graphics.drawable.GradientDrawable 
+  type  (int, ColorStateList, float, float) in android.graphics.drawable.GradientDrawable 
+setTaskDescription (TaskDescription)
+setThumbTintList (ColorStateList)
+setThumbTintMode (Mode)
+setTint (int)
+setTintList (ColorStateList)
+setTintMode (Mode)
+setToDegrees (float)
+setTouchscreenBlocksFocus (boolean)
+setTransitionBackgroundFadeDuration (long)
+setTransitionGroup (boolean)
+setTransitionManager (TransitionManager)
+setTransitionName (String)
+setTranslationZ (float)
+setUninstallBlocked (ComponentName, String, boolean)
+setVideoURI (Uri, Map<String, String>)
+setView (int)
+setVisibility (int)
+setVoice (Voice)
+setVolume (float)
+setZ (float)
+shouldInterceptRequest
+  type  (WebView, WebResourceRequest) in android.webkit.WebViewClient 
+  type  (WebView, String) in android.webkit.WebViewClient 
+speak (CharSequence, int, Bundle, String)
+spec
+  type  (int, Alignment, float) in android.widget.GridLayout 
+  type  (int, float) in android.widget.GridLayout 
+  type  (int, int, Alignment, float) in android.widget.GridLayout 
+  type  (int, int, float) in android.widget.GridLayout 
+startAppWidgetConfigureActivityForResult (Activity, int, int, int, Bundle)
+startLockTask ()
+startMethodTracingSampling (String, int, int)
+startNestedScroll (int)
+startPostponedEnterTransition ()
+startWps (WpsInfo, WpsCallback)
+stopLockTask ()
+stopNestedScroll ()
+supportsAidPrefixRegistration ()
+supportsSource (int)
+switchUser (ComponentName, UserHandle)
+synthesizeToFile (CharSequence, Bundle, File, String)
+
+
+toLanguageTag ()
+translationZ (float)
+translationZBy (float)
+
+
+uninstallAllUserCaCerts (ComponentName)
+uninstallCaCert (ComponentName, byte[])
+unregisterNetworkCallback (NetworkCallback)
+unsetPreferredService (Activity)
+updateCursorAnchorInfo
+  type  (CursorAnchorInfo) in android.inputmethodservice.InputMethodService.InputMethodSessionImpl 
+  type  (View, CursorAnchorInfo) in android.view.inputmethod.InputMethodManager 
+  type  (CursorAnchorInfo) in android.view.inputmethod.InputMethodSession 
+
+
+vibrate
+  type  (long, AudioAttributes) in android.os.Vibrator 
+  type  (long[], int) in android.os.Vibrator 
+  type  (long[], int, AudioAttributes) in android.os.Vibrator 
+
+
+wakeUp ()
+write
+  type  (float[], int, int, int) in android.media.AudioTrack 
+  type  (ByteBuffer, int, int) in android.media.AudioTrack 
+writePersistableBundle (PersistableBundle)
+writeSize (Size)
+writeSizeF (SizeF)
+
+
+z (float)
+zBy (float)
+zoomBy (float)

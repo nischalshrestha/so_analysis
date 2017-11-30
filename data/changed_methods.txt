@@ -1,0 +1,153 @@
+addAction (int)
+addTab
+  type  (Tab) in android.app.ActionBar 
+  type  (Tab, boolean) in android.app.ActionBar 
+  type  (Tab, int) in android.app.ActionBar 
+  type  (Tab, int, boolean) in android.app.ActionBar 
+areDefaultsEnforced ()
+
+
+clear ()
+clipRegion
+  type  (Region) in android.graphics.Canvas 
+  type  (Region, Op) in android.graphics.Canvas 
+containsKey (String)
+createByCodecName (String)
+createDecoderByType (String)
+createEncoderByType (String)
+
+
+drawBitmap
+  type  (int[], int, int, float, float, int, int, boolean, Paint) in android.graphics.Canvas 
+  type  (int[], int, int, int, int, int, int, boolean, Paint) in android.graphics.Canvas 
+
+
+enableHardwareAcceleration ()
+
+
+formatJapaneseNumber (Editable)
+formatNanpNumber (Editable)
+
+
+get (String)
+getActions ()
+getCodecCount ()
+getCodecInfoAt (int)
+getDefaultLanguage ()
+getDoubleArray (String)
+getFeatures (Locale)
+getFormatTypeForLocale (Locale)
+getHandle ()
+getInputBuffers ()
+getIntArray (String)
+getLanguage ()
+getLongArray (String)
+getNavigationItemCount ()
+getNavigationMode ()
+getNetworkPreference ()
+getOutputBuffers ()
+getRasterizer ()
+getRecentTasks (int, int)
+getRunningTasks (int)
+getSelectedNavigationIndex ()
+getSelectedTab ()
+getStorageState (File)
+getStreamType ()
+getStringArray (String)
+getTabAt (int)
+getTabCount ()
+getText ()
+getUserId ()
+
+
+isEmpty ()
+isWatchingCursor (View)
+
+
+keySet ()
+
+
+newTab ()
+
+
+onGetSummary ()
+onNotificationPosted (StatusBarNotification)
+onNotificationRemoved (StatusBarNotification)
+onUnhandledKeyEvent (WebView, KeyEvent)
+onUpdateCursor (Rect)
+openSession ()
+
+
+playEarcon (String, int, HashMap<String, String>)
+playSilence (long, int, HashMap<String, String>)
+putDouble (String, double)
+putDoubleArray (String, double[])
+putInt (String, int)
+putIntArray (String, int[])
+putLong (String, long)
+putLongArray (String, long[])
+putString (String, String)
+putStringArray (String, String[])
+
+
+registerMediaButtonEventReceiver
+  type  (PendingIntent) in android.media.AudioManager 
+  type  (ComponentName) in android.media.AudioManager 
+registerRemoteControlClient (RemoteControlClient)
+registerRemoteController (RemoteController)
+remove (String)
+removeAllCookie ()
+removeAllTabs ()
+removeExpiredCookie ()
+removeSessionCookie ()
+removeStickyBroadcast (Intent)
+removeStickyBroadcastAsUser (Intent, UserHandle)
+removeTab (Tab)
+removeTabAt (int)
+requestRouteToHost (int, int)
+
+
+selectTab (Tab)
+sendStickyBroadcast (Intent)
+sendStickyBroadcastAsUser (Intent, UserHandle)
+sendStickyOrderedBroadcast (Intent, BroadcastReceiver, Handler, int, String, Bundle)
+sendStickyOrderedBroadcastAsUser (Intent, UserHandle, BroadcastReceiver, Handler, int, String, Bundle)
+setCamera (Camera)
+setListNavigationCallbacks (SpinnerAdapter, OnNavigationListener)
+setNavigationMode (int)
+setNetworkPreference (int)
+setRasterizer (Rasterizer)
+setReparent (boolean)
+setSelectedNavigationItem (int)
+setSelectionFromTop (int, int)
+setStereoVolume (float, float)
+setStreamType (int)
+setTicker (CharSequence, RemoteViews)
+setTitleColor
+  type  (int) in android.app.Activity 
+  type  (int) in android.view.Window 
+setUserRestriction (String, boolean)
+setUserRestrictions
+  type  (Bundle) in android.os.UserManager 
+  type  (Bundle, UserHandle) in android.os.UserManager 
+size ()
+speak (String, int, HashMap<String, String>)
+startLeScan
+  type  (LeScanCallback) in android.bluetooth.BluetoothAdapter 
+  type  (UUID[], LeScanCallback) in android.bluetooth.BluetoothAdapter 
+startUsingNetworkFeature (int, String)
+stopLeScan (LeScanCallback)
+stopUsingNetworkFeature (int, String)
+syncFromRamToFlash ()
+synthesizeToFile (String, HashMap<String, String>, String)
+
+
+unregisterMediaButtonEventReceiver
+  type  (PendingIntent) in android.media.AudioManager 
+  type  (ComponentName) in android.media.AudioManager 
+unregisterRemoteControlClient (RemoteControlClient)
+unregisterRemoteController (RemoteController)
+updateCursor (View, int, int, int, int)
+
+
+vibrate (long)

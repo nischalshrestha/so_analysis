@@ -1,0 +1,53 @@
+
+addEarcon (String, String)
+
+
+cancelNotification (String, String, int)
+createPrintDocumentAdapter ()
+
+
+formatNumber
+  type  (String) in android.telephony.PhoneNumberUtils 
+  type  (Editable, int) in android.telephony.PhoneNumberUtils 
+
+
+getAssetInt ()
+getDouble
+  type  (String) in android.os.Bundle 
+  type  (String, double) in android.os.Bundle 
+getInt
+  type  (String) in android.os.Bundle 
+  type  (String, int) in android.os.Bundle 
+getLong
+  type  (String) in android.os.Bundle 
+  type  (String, long) in android.os.Bundle 
+getString
+  type  (String) in android.os.Bundle 
+  type  (String, String) in android.os.Bundle 
+getTextColor (Context, TypedArray, int)
+getTextColors (Context, TypedArray)
+glGetActiveAttrib (int, int, int, IntBuffer, IntBuffer, IntBuffer, byte)
+glGetActiveUniform (int, int, int, IntBuffer, IntBuffer, IntBuffer, byte)
+glGetShaderSource (int, int, IntBuffer, byte)
+goToSleep (long)
+
+
+initializeFadingEdge (TypedArray)
+initializeScrollbars (TypedArray)
+
+
+obtain (int)
+onError (String)
+
+
+setSound (Uri, int)
+shouldInterceptRequest (WebView, String)
+
+
+userActivity (long, boolean)
+
+
+vibrate (long[], int)
+
+
+wakeUp (long)
