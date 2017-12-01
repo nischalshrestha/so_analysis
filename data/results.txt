@@ -1,0 +1,33 @@
+Number of questions with answers: 2426 (83.57%)
+Number of questions with no answers: 477 (16.43%)
+Number of questions with an accepted answer: 1547 (53.29%)
+Number of questions with votes >= 3: 828 (28.52%)
+Number of questions with views >= 300: 1815 (62.52%)
+Number of questions with favorites: 942 (32.45%)
+Number of questions with images: 1060 (36.51%)
+Number of answers with images: 903 (37.22%)
+Number of accepted answers with images: 560 (36.20%)
+Number of questions with links: 1517 (52.26%)
+Number of answers with links: 1288 (53.09%)
+Number of accepted answers with links: 815 (52.68%)
+Number of questions with SO links: 132 (8.70%)
+Number of answers with SO links: 115 (7.58%)
+Number of accepted answers with SO links: 56 (6.87%)
+Number of questions with Android links: 129 (8.50%)
+Number of answers with Android links: 116 (9.01%)
+Number of accepted answers with Android links: 57 (6.99%)
+Number of questions with other links: 1256 (82.79%)
+Number of answers with other links: 1057 (82.07%)
+Number of accepted answers with other links: 702 (86.13%)
+****CODE MARKUP PRESENT****
+Number of questions with code markup: 2066 (71.17%)
+Number of questions with added classes: 20 (13.61%)
+Number of total added classes: 147
+Number of questions with changed classes: 125 (34.72%)
+Number of total changed classes: 360
+Number of questions with added methods: 105 (16.33%)
+Number of total questions with added methods: 643
+Number of questions with changed methods: 28 (26.17%)
+Number of total questions with changed methods: 107
+Number of questions with removed methods: 7 (29.17%)
+Number of total questions with removed methods: 24

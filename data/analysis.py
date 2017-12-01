@@ -35,10 +35,10 @@ df_a = pd.read_csv('QueryAllAnswers.csv')
 df_at = df_a.shape[0]
 
 # Given a filtered dataframe, print total rows and percentage from total
-def print_stats(df, s):
+def print_stats(df, df_c, s, t='questions'):
 	df_t = df.shape[0]
-	df_p = int(((df_t / float(df_qt))*100))
-	print("Number of questions with %s: %d (%d%%)" % (s, df_t, df_p))
+	df_p = (df_t / float(df_c.shape[0]))*100
+	print("Number of %s with %s: %d (%.2f%%)" % (t, s, df_t, df_p))
 
 # Descriptive stats for Table 1 answering RQ1 generally
 
@@ -46,132 +46,241 @@ def print_stats(df, s):
 
 # questions with at least an answer
 df_answer = df_q[df_q.AnswerCount > 0]
-print_stats(df_answer, 'answers')
+print_stats(df_answer, df_q, 'answers')
 
 # questions with no answer
 df_no_answer = df_q[df_q.AnswerCount == 0]
-print_stats(df_no_answer, 'no answers')
+print_stats(df_no_answer, df_q, 'no answers')
 
 # questions with accepted answer
 df_accepted = df_q[df_q['AcceptedAnswerId'].isnull()]
-print_stats(df_accepted, 'an accepted answer')
+print_stats(df_accepted, df_q, 'an accepted answer')
 
  # questions with score >= 3
 df_vo = df_q[df_q.Score >= 3]
-print_stats(df_vo, 'votes >= 3')
+print_stats(df_vo, df_q, 'votes >= 3')
 
 # questions with views >= 300
 df_vu = df_q[df_q.ViewCount >= 300]
-print_stats(df_vu, 'views >= 100')
+print_stats(df_vu, df_q, 'views >= 300')
 
 # questions with favorites
 df_f = df_q[df_q.FavoriteCount > 0]
-print_stats(df_f, 'favorites')
-
-# questions with code markup or code sample
-# df_code = df_q[df_q]
-
-# html_text = """
-# <h2>this is cool #12345678901</h2>
-# <h2>this is nothing</h2>
-# <h2>this is interesting #126666678901</h2>
-# <h2>this is blah #124445678901</h2>
-# """
-
-# soup = BeautifulSoup(html_text, 'html.parser')
-
-# pattern = re.compile(r'blah')
-# print(soup.find('h2', text=pattern))
+print_stats(df_f, df_q, 'favorites')
 
 # Returns a list of ids of df that contains a given html in body
-def tags(tag):
+def tags(df, tag):
 	ids = []
-	for index, row in df_q.iterrows():
+	for index, row in df.iterrows():
 		soup = BeautifulSoup(row['Body'], 'html.parser')
 		if len(soup.find_all(tag)) > 0:
 			ids.append(row['Id'])
 	return ids
 
-# questions with images
-img_ids = tags('img')
-df_i = df_q[df_q['Id'].isin(img_ids)]
-df_i_t = df_i.shape[0]
-df_i_p = int(((df_i_t / float(df_qt))*100))
-print("Number of questions with images: %d (%d%%)" % (df_i_t, df_i_p))	
+# print('****IMAGES****')
 
-# HREF LINKS GENERAL
+# questions with images
+img_ids = tags(df_q, 'img')
+df_i = df_q[df_q['Id'].isin(img_ids)]
+print_stats(df_i, df_q, 'images')
+# answers with images
+img_ids = tags(df_answer, 'img')
+df_i = df_answer[df_answer['Id'].isin(img_ids)]
+print_stats(df_i, df_answer, 'images', t='answers')
+# answers with images
+img_ids = tags(df_accepted, 'img')
+df_i = df_accepted[df_accepted['Id'].isin(img_ids)]
+print_stats(df_i, df_accepted, 'images', t='accepted answers')
+
+# # HREF LINKS GENERAL
+
+# print('****LINKS****')
 
 # questions with links
-links_ids = tags('a')
+links_ids = tags(df_q, 'a')
 df_links = df_q[df_q['Id'].isin(links_ids)]
-df_links_t = df_links.shape[0]
-df_links_p = int(((df_links_t / float(df_qt))*100))
-print("Number of questions with links: %d (%d%%)" % (df_links_t, df_links_p))
+print_stats(df_links, df_q, 'links')
+# answers with links
+links_ids = tags(df_answer, 'a')
+df_links_a = df_answer[df_answer['Id'].isin(links_ids)]
+print_stats(df_links_a, df_answer, 'links', t='answers')
+# accepted answers with links
+links_ids = tags(df_accepted, 'a')
+df_links_aa = df_accepted[df_accepted['Id'].isin(links_ids)]
+print_stats(df_links_aa, df_accepted, 'links', t='accepted answers')
 
+# print('****SPECIFIC LINKS****')
+other_sites = []
 # HREF LINKS SPECIFIC (could be cleaned up but will do for now)
-so_links = []
-droid_links = []
-other_links = []
-for index, row in df_links.iterrows():
-	soup = BeautifulSoup(row['Body'], 'html.parser')
-	so_urls = soup.find_all('a', href=re.compile('stackoverflow.com'))
-	droid_urls = soup.find_all('a', href=re.compile('developer.android.com'))
-	if len(droid_urls) > 0:
-		droid_links.append(row['Id'])
-	elif len(so_urls) > 0:
-		so_links.append(row['Id'])
-	else:
-		other_links.append(row['Id'])
+def links(df):
+	so_links = []
+	droid_links = []
+	google_links = []
+	other_links = []
+	for index, row in df.iterrows():
+		soup = BeautifulSoup(row['Body'], 'html.parser')
+		urls = soup.find_all('a')
+		google_urls = soup.find_all('a', href=re.compile('google.com/design'))
+		so_urls = soup.find_all('a', href=re.compile('stackoverflow.com'))
+		droid_urls = soup.find_all('a', href=re.compile('developer.android.com'))
+		if len(droid_urls) > 0:
+			droid_links.append(row['Id'])
+		elif len(so_urls) > 0:
+			so_links.append(row['Id'])
+		elif len(google_urls) > 0:
+			google_links.append(row['Id'])
+		elif len(urls) > 0:
+			for u in urls:
+				if 'png' in u['href'] or 'jpg' in u['href'] or 'gif' in u['href']:
+					continue;
+				other_links.append(row['Id'])
+				if u not in other_sites:
+					other_sites.append(u['href'])
+	return so_links, droid_links, google_links, other_links
+
+links_specific_q = links(df_links)
+links_specific_a = links(df_links_a)
+links_specific_aa = links(df_links_aa)
 
 # questions with links to other SO posts: stackoverflow.com
-df_so = df_links[df_links['Id'].isin(so_links)]
-df_so_t = df_so.shape[0]
-df_so_p = (df_so_t / float(df_links_t))*100
-print("Number of questions with SO links: %d (%.2f%%)" % (df_so_t, df_so_p))
+df_so = df_links[df_links['Id'].isin(links_specific_q[0])]
+print_stats(df_so, df_links, 'SO links')
+
+# answers with links to other SO posts: stackoverflow.com
+df_so = df_links_a[df_links_a['Id'].isin(links_specific_a[0])]
+print_stats(df_so, df_links, 'SO links', t='answers')
+
+# accepted answers with links to other SO posts: stackoverflow.com
+df_so = df_links_aa[df_links_aa['Id'].isin(links_specific_aa[0])]
+print_stats(df_so, df_links_aa, 'SO links', t='accepted answers')
 
 # questions with links to Android Documentation: developer.android.com
-df_d = df_links[df_links['Id'].isin(droid_links)]
-df_d_t = df_d.shape[0]
-df_d_p = (df_d_t / float(df_links_t))*100
-print("Number of questions with Android links: %d (%.2f%%)" % (df_d_t, df_d_p))
+df_d = df_links[df_links['Id'].isin(links_specific_q[1])]
+print_stats(df_d, df_links, 'Android links')
+
+# answers with links to Android Documentation: developer.android.com
+df_d = df_links_a[df_links_a['Id'].isin(links_specific_a[1])]
+print_stats(df_d, df_links_a, 'Android links', t='answers')
+
+# accepted answers with links to Android Documentation: developer.android.com
+df_d = df_links_aa[df_links_aa['Id'].isin(links_specific_aa[1])]
+print_stats(df_d, df_links_aa, 'Android links', t='accepted answers')
+
+# questions with links to Google Design Documentation: google.com/design
+df_g = df_links[df_links['Id'].isin(links_specific_q[2])]
+print_stats(df_g, df_links, 'Google Design links')
+
+# answers with links to Google Design Documentation: google.com/design
+df_g = df_links_a[df_links_a['Id'].isin(links_specific_a[2])]
+print_stats(df_g, df_links_a, 'Google Design links', t='answers')
+
+# accepted answers with links to Google Design Documentation: google.com/design
+df_g = df_links_aa[df_links_aa['Id'].isin(links_specific_aa[2])]
+print_stats(df_g, df_links_aa, 'Google Design links', t='accepted answers')
 
 # questions with links to other sites
-df_o = df_links[df_links['Id'].isin(other_links)]
-df_o_t = df_o.shape[0]
-df_o_p = (df_o_t / float(df_links_t))*100
-print("Number of questions with other links: %d (%.2f%%)" % (df_o_t, df_o_p))
+df_o = df_links[df_links['Id'].isin(links_specific_q[3])]
+print_stats(df_o, df_links, 'other links')
+
+# answers with links to other sites
+df_o = df_links_a[df_links_a['Id'].isin(links_specific_a[3])]
+print_stats(df_o, df_links_a, 'other links', t='answers')
+
+# answers with links to other sites
+df_o = df_links_aa[df_links_aa['Id'].isin(links_specific_aa[3])]
+print_stats(df_o, df_links_aa, 'other links', t='accepted answers')
+
+with open('other_sites.txt', 'w') as f:
+	for o in other_sites:
+		f.write(o+'\n')
 
 # CODE LINKS (either markup for single word or code sample)
 
+print('****CODE MARKUP PRESENT****')
+
 # questions with code markup or code sample
-codes_ids = tags('code')
+codes_ids = tags(df_q, 'code')
 df_codes = df_q[df_q['Id'].isin(codes_ids)]
-df_codes_t = df_codes.shape[0]
-df_codes_p = int(((df_codes_t / float(df_qt))*100))
-print("Number of questions with codes: %d (%d%%)" % (df_codes_t, df_codes_p))
+print_stats(df_codes, df_q, 'code markup')
+	
 
 # questions with single word code markup
+def coverage(df, file):
+	with open(file, 'r') as f:
+		ids = []
+		referenced = []
+		coverage_type = f.read()
+		coverage_type = list(filter(None, coverage_type.split('\n')))
+		for d in coverage_type:
+			for index, row in df.iterrows():
+				if d in row['Title'] or d in row['Body']:
+					if d not in referenced:
+						referenced.append(d)
+						if d in row['Body'] and d not in ids:
+							ids.append(row['Id'])
+		return referenced, coverage_type, ids
 
+# # print('****CLASS + METHOD COVERAGE****')
+class_coverage = coverage(df_q, 'added_classes.txt')
+class_ref = class_coverage[0]
+class_added = class_coverage[1]
+class_ids = class_coverage[2]
+class_t = len(class_ref)
+class_p = (class_t / float(len(class_added)))*100
 
+print("Number of questions with added classes: %d (%0.2f%%)" % (class_t, class_p))
+print("Number of total added classes: %d" % (len(class_added)))
+
+class_coverage = coverage(df_q, 'changed_classes.txt')
+class_t = len(class_coverage[0])
+class_p = (class_t / float(len(class_coverage[1])))*100
+print("Number of questions with changed classes: %d (%0.2f%%)" % (class_t, class_p))
+print("Number of total changed classes: %d" % (len(class_coverage[1])))
+
+# # Cleans the methods files
+# # with open('removed_methods.txt', 'r') as f, open('removed_methods_clean.txt', 'w') as o:
+# # 		referenced = []
+# # 		lines = f.read().split('\n')
+# # 		for l in lines:
+# # 			if 'type' not in l:
+# # 				o.write(l.split(' ')[0]+'\n')
+
+method_coverage = coverage(df_q, 'added_methods.txt')
+method_t = len(method_coverage[0])
+method_p = (method_t / float(len(method_coverage[1])))*100
+print("Number of questions with added methods: %d (%0.2f%%)" % (method_t, method_p))
+print("Number of total questions with added methods: %d" % (len(method_coverage[1])))
+
+method_coverage = coverage(df_q, 'changed_methods.txt')
+method_t = len(method_coverage[0])
+method_p = (method_t / float(len(method_coverage[1])))*100
+print("Number of questions with changed methods: %d (%0.2f%%)" % (method_t, method_p))
+print("Number of total questions with changed methods: %d" % (len(method_coverage[1])))
+
+method_coverage = coverage(df_q, 'removed_methods.txt')
+method_t = len(method_coverage[0])
+method_p = (method_t / float(len(method_coverage[1])))*100
+print("Number of questions with removed methods: %d (%0.2f%%)" % (method_t, method_p))
+print("Number of total questions with removed methods: %d" % (len(method_coverage[1])))
 
 
 # questions with code sample
-# randomly sample 300 questions that have answers
-# df_r = df_q.sample(300)
-# with open('random_sample.html', 'w') as f:
+# randomly sample 100 questions that have answers
+# df_r = df_vu.sample(100)
+# with open('random_sample.html', 'w') as f, open('random_sample_ids.txt', 'w') as o:
 # 	f.write('<!DOCTYPE html>\n')
 # 	f.write('<html lang="en-US">\n')
 # 	f.write('<head><style>body {background-color: #5c8457;}' \
-# 		+ ' h1 {color: white;}p, a {color: #E8AA0C;}</style></head>')
+# 		+ ' h1 {color: white;}p {color: #E8AA0C;}</style></head>')
 # 	f.write('<body><p>\n')
 # 	values = list(df_r['Id'].values)
 # 	# print(values)
 # 	for i in range(0, len(values)):
+# 		o.write(str(values[i])+'\n')
 # 		f.write('<a href=\"https://stackoverflow.com/questions/' + \
-# 			str(values[i]) + '\" target=\"_blank\">' + str(values[i])+'</a>\n')
+# 			# str(values[i]) + '\" target=\"_blank\">' + str(values[i])+'</a>\n')
+# 			str(values[i]) + '\">' + str(values[i])+'</a>\n')
 # 	f.write('</p><body>\n')
 # 	f.write('</html>')
 
-# TODO: Descriptive stats for Table 1 answering RQ1 by category on random 
-# subset of questions
 

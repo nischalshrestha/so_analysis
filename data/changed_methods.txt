@@ -1,153 +1,135 @@
-addAction (int)
+addAction
 addTab
-  type  (Tab) in android.app.ActionBar 
-  type  (Tab, boolean) in android.app.ActionBar 
-  type  (Tab, int) in android.app.ActionBar 
-  type  (Tab, int, boolean) in android.app.ActionBar 
-areDefaultsEnforced ()
+areDefaultsEnforced
 
 
-clear ()
+clear
 clipRegion
-  type  (Region) in android.graphics.Canvas 
-  type  (Region, Op) in android.graphics.Canvas 
-containsKey (String)
-createByCodecName (String)
-createDecoderByType (String)
-createEncoderByType (String)
+containsKey
+createByCodecName
+createDecoderByType
+createEncoderByType
 
 
 drawBitmap
-  type  (int[], int, int, float, float, int, int, boolean, Paint) in android.graphics.Canvas 
-  type  (int[], int, int, int, int, int, int, boolean, Paint) in android.graphics.Canvas 
 
 
-enableHardwareAcceleration ()
+enableHardwareAcceleration
 
 
-formatJapaneseNumber (Editable)
-formatNanpNumber (Editable)
+formatJapaneseNumber
+formatNanpNumber
 
 
-get (String)
-getActions ()
-getCodecCount ()
-getCodecInfoAt (int)
-getDefaultLanguage ()
-getDoubleArray (String)
-getFeatures (Locale)
-getFormatTypeForLocale (Locale)
-getHandle ()
-getInputBuffers ()
-getIntArray (String)
-getLanguage ()
-getLongArray (String)
-getNavigationItemCount ()
-getNavigationMode ()
-getNetworkPreference ()
-getOutputBuffers ()
-getRasterizer ()
-getRecentTasks (int, int)
-getRunningTasks (int)
-getSelectedNavigationIndex ()
-getSelectedTab ()
-getStorageState (File)
-getStreamType ()
-getStringArray (String)
-getTabAt (int)
-getTabCount ()
-getText ()
-getUserId ()
+get
+getActions
+getCodecCount
+getCodecInfoAt
+getDefaultLanguage
+getDoubleArray
+getFeatures
+getFormatTypeForLocale
+getHandle
+getInputBuffers
+getIntArray
+getLanguage
+getLongArray
+getNavigationItemCount
+getNavigationMode
+getNetworkPreference
+getOutputBuffers
+getRasterizer
+getRecentTasks
+getRunningTasks
+getSelectedNavigationIndex
+getSelectedTab
+getStorageState
+getStreamType
+getStringArray
+getTabAt
+getTabCount
+getText
+getUserId
 
 
-isEmpty ()
-isWatchingCursor (View)
+isEmpty
+isWatchingCursor
 
 
-keySet ()
+keySet
 
 
-newTab ()
+newTab
 
 
-onGetSummary ()
-onNotificationPosted (StatusBarNotification)
-onNotificationRemoved (StatusBarNotification)
-onUnhandledKeyEvent (WebView, KeyEvent)
-onUpdateCursor (Rect)
-openSession ()
+onGetSummary
+onNotificationPosted
+onNotificationRemoved
+onUnhandledKeyEvent
+onUpdateCursor
+openSession
 
 
-playEarcon (String, int, HashMap<String, String>)
-playSilence (long, int, HashMap<String, String>)
-putDouble (String, double)
-putDoubleArray (String, double[])
-putInt (String, int)
-putIntArray (String, int[])
-putLong (String, long)
-putLongArray (String, long[])
-putString (String, String)
-putStringArray (String, String[])
+playEarcon
+playSilence
+putDouble
+putDoubleArray
+putInt
+putIntArray
+putLong
+putLongArray
+putString
+putStringArray
 
 
 registerMediaButtonEventReceiver
-  type  (PendingIntent) in android.media.AudioManager 
-  type  (ComponentName) in android.media.AudioManager 
-registerRemoteControlClient (RemoteControlClient)
-registerRemoteController (RemoteController)
-remove (String)
-removeAllCookie ()
-removeAllTabs ()
-removeExpiredCookie ()
-removeSessionCookie ()
-removeStickyBroadcast (Intent)
-removeStickyBroadcastAsUser (Intent, UserHandle)
-removeTab (Tab)
-removeTabAt (int)
-requestRouteToHost (int, int)
+registerRemoteControlClient
+registerRemoteController
+remove
+removeAllCookie
+removeAllTabs
+removeExpiredCookie
+removeSessionCookie
+removeStickyBroadcast
+removeStickyBroadcastAsUser
+removeTab
+removeTabAt
+requestRouteToHost
 
 
-selectTab (Tab)
-sendStickyBroadcast (Intent)
-sendStickyBroadcastAsUser (Intent, UserHandle)
-sendStickyOrderedBroadcast (Intent, BroadcastReceiver, Handler, int, String, Bundle)
-sendStickyOrderedBroadcastAsUser (Intent, UserHandle, BroadcastReceiver, Handler, int, String, Bundle)
-setCamera (Camera)
-setListNavigationCallbacks (SpinnerAdapter, OnNavigationListener)
-setNavigationMode (int)
-setNetworkPreference (int)
-setRasterizer (Rasterizer)
-setReparent (boolean)
-setSelectedNavigationItem (int)
-setSelectionFromTop (int, int)
-setStereoVolume (float, float)
-setStreamType (int)
-setTicker (CharSequence, RemoteViews)
+selectTab
+sendStickyBroadcast
+sendStickyBroadcastAsUser
+sendStickyOrderedBroadcast
+sendStickyOrderedBroadcastAsUser
+setCamera
+setListNavigationCallbacks
+setNavigationMode
+setNetworkPreference
+setRasterizer
+setReparent
+setSelectedNavigationItem
+setSelectionFromTop
+setStereoVolume
+setStreamType
+setTicker
 setTitleColor
-  type  (int) in android.app.Activity 
-  type  (int) in android.view.Window 
-setUserRestriction (String, boolean)
+setUserRestriction
 setUserRestrictions
-  type  (Bundle) in android.os.UserManager 
-  type  (Bundle, UserHandle) in android.os.UserManager 
-size ()
-speak (String, int, HashMap<String, String>)
+size
+speak
 startLeScan
-  type  (LeScanCallback) in android.bluetooth.BluetoothAdapter 
-  type  (UUID[], LeScanCallback) in android.bluetooth.BluetoothAdapter 
-startUsingNetworkFeature (int, String)
-stopLeScan (LeScanCallback)
-stopUsingNetworkFeature (int, String)
-syncFromRamToFlash ()
-synthesizeToFile (String, HashMap<String, String>, String)
+startUsingNetworkFeature
+stopLeScan
+stopUsingNetworkFeature
+syncFromRamToFlash
+synthesizeToFile
 
 
 unregisterMediaButtonEventReceiver
-  type  (PendingIntent) in android.media.AudioManager 
-  type  (ComponentName) in android.media.AudioManager 
-unregisterRemoteControlClient (RemoteControlClient)
-unregisterRemoteController (RemoteController)
-updateCursor (View, int, int, int, int)
+unregisterRemoteControlClient
+unregisterRemoteController
+updateCursor
 
 
-vibrate (long)
+vibrate
