@@ -43,6 +43,7 @@ def print_stats(df, df_c, s, t='questions'):
 # Descriptive stats for Table 1 answering RQ1 generally
 
 # Looking at open questions
+# TODO Automate some of this in a loop if possible
 
 # questions with at least an answer
 df_answer = df_q[df_q.AnswerCount > 0]
@@ -138,6 +139,8 @@ def links(df):
 					other_sites.append(u['href'])
 	return so_links, droid_links, google_links, other_links
 
+# TODO Lots of redundancy here, automate some of this in a loop if possible
+
 links_specific_q = links(df_links)
 links_specific_a = links(df_links_a)
 links_specific_aa = links(df_links_aa)
@@ -203,7 +206,6 @@ codes_ids = tags(df_q, 'code')
 df_codes = df_q[df_q['Id'].isin(codes_ids)]
 print_stats(df_codes, df_q, 'code markup')
 	
-
 # questions with single word code markup
 def coverage(df, file):
 	with open(file, 'r') as f:
@@ -237,13 +239,13 @@ class_p = (class_t / float(len(class_coverage[1])))*100
 print("Number of questions with changed classes: %d (%0.2f%%)" % (class_t, class_p))
 print("Number of total changed classes: %d" % (len(class_coverage[1])))
 
-# # Cleans the methods files
-# # with open('removed_methods.txt', 'r') as f, open('removed_methods_clean.txt', 'w') as o:
-# # 		referenced = []
-# # 		lines = f.read().split('\n')
-# # 		for l in lines:
-# # 			if 'type' not in l:
-# # 				o.write(l.split(' ')[0]+'\n')
+# This was used to clean the methods files which only includes names of methods
+# with open('removed_methods.txt', 'r') as f, open('removed_methods_clean.txt', 'w') as o:
+# 		referenced = []
+# 		lines = f.read().split('\n')
+# 		for l in lines:
+# 			if 'type' not in l:
+# 				o.write(l.split(' ')[0]+'\n')
 
 method_coverage = coverage(df_q, 'added_methods.txt')
 method_t = len(method_coverage[0])
@@ -263,9 +265,10 @@ method_p = (method_t / float(len(method_coverage[1])))*100
 print("Number of questions with removed methods: %d (%0.2f%%)" % (method_t, method_p))
 print("Number of total questions with removed methods: %d" % (len(method_coverage[1])))
 
-
 # questions with code sample
-# randomly sample 100 questions that have answers
+# Randomly sample 100 questions that have answers
+# The html file is simply to make the tagging process easier, in the future
+# one could build a web app for such tasks
 # df_r = df_vu.sample(100)
 # with open('random_sample.html', 'w') as f, open('random_sample_ids.txt', 'w') as o:
 # 	f.write('<!DOCTYPE html>\n')
