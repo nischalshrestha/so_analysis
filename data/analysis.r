@@ -19,10 +19,10 @@ require(stats)
 
 # Flexibility of assignment in R
 # Holds all the questions
-df <- read.csv('QueryQuestions.csv')
-# read.csv('QueryQuestions.csv') -> df
+df <- read.csv('Questions.csv')
+# read.csv('Questions.csv') -> df
 # gotcha: be sure to surround variable name in quotes for assign
-# assign("df", read.csv('QueryQuestions.csv'))
+# assign("df", read.csv('Questions.csv'))
 
 # Next confusion is regarding:
 #   data type assumption
@@ -54,7 +54,7 @@ df <- read.csv('QueryQuestions.csv')
 # df_q <- df[df$ClosedDate == '' & df$Score == 0, c('ClosedDate', 'Score')]
 # df_q <- df[which(df$ClosedDate == '' & df$Score > 0),]
 # select(df, 1:10)[1:2,]
-df <- read.csv('QueryQuestions.csv')
+df <- read.csv('Questions.csv')
 df_q <- subset(df, ClosedDate == '' & AnswerCount > 0 & Score > 0, 
     select = c('ClosedDate', 'Score'))
 
@@ -82,8 +82,7 @@ fx <- function(x) {
 }
 
 # Base R approach
-df <- read.csv('QueryQuestions.csv')
-# c <- 1:dim(df)[1]
+df <- read.csv('Questions.csv')
 df <- df[df$ClosedDate == '' & df$Score > 0, ]
 # most basic way of populating a new column with binary value
 df$Accepted <- unlist(ifelse(!is.na(df$AcceptedAnswerId), 1, 0))
@@ -94,22 +93,25 @@ df$Accepted <- unlist(ifelse(!is.na(df$AcceptedAnswerId), 1, 0))
 # a better way if using an apply() is to use sapply() which vectorizes results
 # df$Accepted <- sapply(df$AcceptedAnswerId, function(x) ifelse(!is.na(x), 1, 0))
 # cols <- 
-df <- df[, c("Score", "Accepted", "ViewCount", "AnswerCount", "CommentCount")]
+df <- df[, c("Score", "Accepted", "AnswerCount", "CommentCount")]
+
 # trick/gotcha: you don't even need the data=df_q OR FUN=mean
 # gotcha: you need to caps the FUN
 # gotcha: you need to make data all lower
 # trick: add a - operator for desc instead of decreasing=TRUE
-df <- aggregate(. ~ Score, data=df, FUN=mean, na.rm=TRUE)
+# df <- aggregate(. ~ Score, data=df, FUN=mean, na.rm=TRUE)
+# convenience: you can leave out "data" and "FUN"
+df <- aggregate(. ~ Score, df, mean, na.rm=TRUE)
+# print(dim(df))
 df <- df[order(-df$Score), ]
-cor(df, use="complete.obs", method="pearson")
+cor(df, use = "complete.obs", method = "pearson")
 print(head(df, 10))
 
-
 # Tidy-verse approach
-df_t <- read.csv('QueryQuestions.csv') %>% 
+df_t <- read.csv('Questions.csv') %>% 
     filter(ClosedDate == '', Score > 0) %>%
     mutate(Accepted = ifelse(!is.na(AcceptedAnswerId), 1, 0)) %>%
-    select(Score, Accepted, ViewCount, AnswerCount, CommentCount) %>%
+    select(Score, Accepted, AnswerCount, CommentCount) %>%
     group_by(Score) %>%
     # summarise_at(funs(mean), list("Accepted", "ViewCount", "AnswerCount", "CommentCount"))
     summarise_all(funs(mean)) %>%
